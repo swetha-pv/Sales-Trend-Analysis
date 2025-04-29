@@ -8,6 +8,9 @@ The `sales_trend_analysis.sql` file contains the SQL query used to calculate:
 - **Total Revenue** for each month.
 - **Order Volume** (the number of distinct orders) for each month.
 
+The `top_3_months_by_sales.sql` file contains a query that extracts:
+- **Top 3 Months by Total Revenue** using `ORDER BY total_revenue DESC LIMIT 3`.
+
 ## Dataset
 The dataset `online_sales.csv` contains order data with the following columns:
 - `order_id`: The unique ID of the order.
@@ -21,9 +24,12 @@ The dataset `online_sales.csv` contains order data with the following columns:
 3. **Summed** the `amount` to calculate total revenue.
 4. **Counted** the distinct `order_id` to get the order volume.
 5. **Ordered** the result by year and month for a chronological view.
+6. **Filtered** the results using `ORDER BY total_revenue DESC` and `LIMIT 3` to get the top 3 months by sales.
 
 ## Results
-The results show the monthly total revenue and order volume.
+The results show:
+- Monthly total revenue and order volume.
+- The top 3 highest-grossing months based on total sales.
 
 ## Notes
 - You can use this script with PostgreSQL, MySQL, or SQLite databases.
